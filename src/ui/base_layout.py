@@ -7,14 +7,22 @@ def style_background_home():
 
         <style>
                 
-                .stApp {
-                    background: #5865F2 !important;
+                # .stApp {
+                #     background: #5865F2 !important;
+                # }
+
+                # .stApp div[data-testid="stColumn"]{
+                #     background-color:#E0E3FF !important;
+                #     padding:2rem !important;
+                #     border-radius: 5rem !important;
+                # }
+                .stApp{
+                    background:#E0E3FF !important;
+                    color:black !important;
                 }
 
-                .stApp div[data-testid="stColumn"]{
-                    background-color:#E0E3FF !important;
-                    padding:2rem !important;
-                    border-radius: 5rem !important;
+                h1,h2,h3,h4,h5,h6,p,span,label,div{
+                    color:black !important;
                 }
         </style>
 
