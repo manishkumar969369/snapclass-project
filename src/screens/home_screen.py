@@ -15,14 +15,14 @@ def home_screen():
     with col1:
         st.header("I'm Student")
         st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMwn_ZRz_FPX6Eolz0uMuK-Zp51-NZQuRXiBH7zThzDC8dgkWh", width=120,)
-        if st.button('Teacher Portal', type='primary',icon=':material/arrow_outward:', icon_position='right'):
-            st.session_state['login_type']='teacher'
+        if st.button('Student Portal', type='primary',icon=':material/arrow_outward:', icon_position='right'):
+            st.session_state['login_type']='student'
             st.rerun()
     with col2:
         st.header("I'm Teacher")
         st.image("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSSinkx4QEhM61APF2_gb_Y9uQkmoBLmE4XfeuoKyxGAZ2qln7D",width=140)
-        if st.button('Student Portal',type='primary',icon=':material/arrow_outward:', icon_position='right'):
-            st.session_state['login_type']='student'
+        if st.button('Teacher Portal',type='primary',icon=':material/arrow_outward:', icon_position='right'):
+            st.session_state['login_type']='teacher'
             st.rerun()
 
     footer_home()

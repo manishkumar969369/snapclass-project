@@ -1,3 +1,5 @@
+streamlit
+
 # Utilities
 
 numpy
@@ -22,4 +24,7 @@ segno
 pillow
 
 # frontend
-streamlit
+
+#voice pipelines
+librosa
+resemblyzer

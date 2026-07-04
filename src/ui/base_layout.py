@@ -75,11 +75,10 @@ def style_base_layout():
 
                h3 , h4, p{
                     font-family:'Outfit',sans-serif;
-                    color:white !important;
                 }
 
-                div.stButton > button {
-                    background: #5865F2 !important;
+                button {
+                    background-color: #5865F2 !important;
                     color: white !important;
                     border: none !important;
                     border-radius: 25px !important;
@@ -87,20 +86,20 @@ def style_base_layout():
                     transition: all 0.3s ease !important;
                 }
 
-                div.stButton > button:hover {
+                button:hover {
                     background: #4652d9 !important;   /* slightly darker blue */
                     transform: scale(1.05);
                 }
                 button[kind="secondary"]{
                     border-radius:1.5rem !important;
-                    background:#EB459E !important;
+                    background-color:#EB459E !important;
                     padding: 10px 20px !important;
                     border:none !important;
                     transition: transform 0.25s ease-in-out !important;
                 }
                 button[kind="tertiary"]{
                     border-radius:1.5rem !important;
-                    background:#EB459E !important;
+                    background-color:#000000 !important;
                     padding: 10px 20px !important;
                     border:none !important;
                     transition: transform 0.25s ease-in-out !important;
