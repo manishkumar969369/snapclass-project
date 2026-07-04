@@ -48,7 +48,7 @@ def style_base_layout():
            @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
             
                 
-                # /* hide top streamlit bar*/
+                /* hide top streamlit bar*/
 
                 #MainMenu, footer, header{
                     visibility:hidden;
