@@ -7,16 +7,15 @@ def style_background_home():
 
         <style>
                 
-                # .stApp {
-                #     background: #5865F2 !important;
-                # }
+                .stApp {
+                    background: #5865F2 !important;
+                }
 
-                # .stApp div[data-testid="stColumn"]{
-                #     background-color:#E0E3FF !important;
-                #     padding:2rem !important;
-                #     border-radius: 5rem !important;
-                # }
-                
+                .stApp div[data-testid="stColumn"]{
+                    background-color:#E0E3FF !important;
+                    padding:2rem !important;
+                    border-radius: 5rem !important;
+                }
         </style>
 
                 """
@@ -49,7 +48,7 @@ def style_base_layout():
            @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
             
                 
-                /* hide top streamlit bar*/
+                # /* hide top streamlit bar*/
 
                 #MainMenu, footer, header{
                     visibility:hidden;
