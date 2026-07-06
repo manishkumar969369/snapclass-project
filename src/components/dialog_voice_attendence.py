@@ -37,7 +37,7 @@ def voice_attendence_dialog(selected_subject_id):
             }
 
             if not candidate_dict:
-                st.error('No Enrolled students have voice profile regidtred!')
+                st.error('No Enrolled students have voice profile registered!')
                 return
             
             audio_bytes = audio_data.read()
