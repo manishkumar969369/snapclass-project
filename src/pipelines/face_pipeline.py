@@ -8,13 +8,13 @@ from src.database.db import get_all_students
 
 @st.cache_resource
 def load_dlib_models():
-    detector = dlib.get_frontal_face_detector() # face detect triangular bna dega
+    detector = dlib.get_frontal_face_detector() # face detect like triangular shape or circle shape bna dega
 
-    sp = dlib.shape_predictor(
+    sp = dlib.shape_predictor(#This is the 68 Facial Landmark Detector.its find eyes mouth nose jawline
         face_recognition_models.pose_predictor_model_location()
     )
 
-    facerec = dlib.face_recognition_model_v1(
+    facerec = dlib.face_recognition_model_v1(# deep learning model based on ReNet-based CNN => 128-D convert face embeding 
         face_recognition_models.face_recognition_model_location()
     )
 
@@ -22,18 +22,18 @@ def load_dlib_models():
 
 def get_face_embeddings(image_np):
     detector,sp,facerec=load_dlib_models()
-    faces = detector(image_np,1)
+    faces = detector(image_np,1)# detect students faces e,g => 5
 
     encodings = []
 
     for face in faces:
-        shape = sp(image_np,face)
-        face_detector = facerec.compute_face_descriptor(image_np, shape,1) # 128 embedding
+        shape = sp(image_np,face)# Find facial landmarks.
+        face_detector = facerec.compute_face_descriptor(image_np, shape,1) # convert face in 128 embedding
 
         encodings.append(np.array(face_detector))
     return encodings
 
-@st.cache_resource
+@st.cache_resource # load the model once to make better performance of out application
 def get_trained_model():
     X = []
     y= []
@@ -46,8 +46,8 @@ def get_trained_model():
     for student in student_db:
         embedding = student.get('face_embedding')
         if embedding:
-            X.append(np.array(embedding))
-            y.append(student.get('student_id'))
+            X.append(np.array(embedding))# features
+            y.append(student.get('student_id'))# labels
     
 
     if len(X) == 0:
